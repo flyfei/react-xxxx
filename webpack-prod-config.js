@@ -44,7 +44,7 @@ module.exports = {
   ],
   resolve: {
     root: `${__dirname}/src`,
-    extends: ['web.js', '.js', '.jsx']
+    extends: ['', '.web.js', '.js', '.jsx', '.json']
   },
   plugins: [
     new CleanWebpackPlugin('dist'),
