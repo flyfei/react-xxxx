@@ -1,0 +1,38 @@
+.header
+  overflow hidden
+  transition .3s
+  font-size 14px
+  left 180px
+  right 0
+  position fixed
+  z-index 999
+  height 60px
+  background-color #fff
+  line-height @height
+  border-bottom 1px solid #eee
+  padding 0 20px
+  &.thin
+    left 60px
+
+.left
+  float left
+.right
+  float right
+
+.avatar
+  margin-top 15px
+  margin-left 10px
+  margin-right @margin-left
+  display inline-block
+  height 30px
+  width @height
+  border-radius 50%
+  overflow hidden
+.nav-link
+  vertical-align top
+  transition color .3s
+  display inline-block
+  margin-right 30px
+  color #666
+  &:hover
+    color #000

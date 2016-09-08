@@ -1,0 +1,123 @@
+$bg-color-hover = #1f2436
+$bg-color = #171d2c
+$text-color = #a0a7c1
+$orange = #f74722
+
+.menu
+  font-size 14px
+  user-select none
+  white-space nowrap
+  position fixed
+  width 180px
+  left 0
+  top 0
+  height 100%
+  transition width .3s
+  overflow hidden
+  z-index 999
+  &.thin
+    width 60px
+    overflow visible
+    .item:hover .text
+      visibility visible
+      opacity 1
+    .text
+      z-index 999
+      position absolute
+      background-color alpha($bg-color, .95)
+      color #fff
+      height 30px
+      line-height 30px
+      left 70px
+      top 10px
+      padding 0 10px
+      border-radius 3px
+      opacity 0
+      transition opacity .3s
+      visibility hidden
+      &:after
+        content ''
+        display block
+        position absolute
+        width 0
+        height 0
+        border 4px solid transparent
+        border-right-color alpha($bg-color, .8)
+        left -8px
+        top 10px
+
+.logo
+  height 60px
+  color #fff
+  background-color $orange
+  overflow hidden
+  
+.icon
+  display block
+  position absolute
+  left 0
+  top 0
+  height 50px
+  width 60px
+  line-height @height
+  text-align center
+  transition transform .3s
+  &.roate
+    transform rotate(-90deg)
+
+.scroller
+  background-color $bg-color
+  height 100%
+  &:after
+    content ''
+    width 30px
+    margin 20px auto
+    border-top 1px solid $text-color
+    display block
+    color $text-color
+
+.item
+  display block
+  cursor pointer
+  color $text-color
+  height 50px
+  line-height @height
+  padding-left 60px
+  transition background-color .3s, color .3s
+  position relative
+  &:before
+    content ''
+    display block
+    position absolute
+    width 3px
+    height 100%
+    left 0
+    top 0
+    background-color $orange
+    opacity 0
+    transition opacity .3s
+  &:hover
+    color #fff
+    background-color $bg-color-hover
+    &:before
+      opacity 1
+
+.switch
+  text-align center
+  padding 15px 0
+  cursor pointer
+  background-color $bg-color
+  transition .3s
+  &:hover
+    background-color $bg-color-hover
+    span
+      background-color #fff
+  span
+    background-color #a0a7c1
+    color #a0a7c1
+    transition .3s
+    display inline-block
+    height 16px
+    width 2px
+    border-radius 3px
+    margin 0 3px

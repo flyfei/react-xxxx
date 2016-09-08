@@ -1,0 +1,42 @@
+.container
+    padding 0 20px
+.row
+  margin-left -10px
+  margin-right @margin-left
+  &:before
+  &:after
+    content ''
+    display block
+    clear both
+  [class*="col-"]
+    padding-left 10px
+    padding-right @padding-left
+    margin-bottom 10px
+  for i in 0...25
+    .col-xs-{i}
+      float left
+      width (100*i/24)%
+      .offset-xs-{i}
+        margin-left (100*i/24)%
+
+  for i in 0...25
+    @media(min-width 768px)
+      .col-sm-{i}
+        float left
+        width (100*i/24)%
+      .offset-sm-{i}
+        margin-left (100*i/24)%
+  for i in 0...25
+    @media(min-width 992px)
+      .col-md-{i}
+        float left
+        width (100*i/24)%
+      .offset-md-{i}
+        margin-left (100*i/24)%
+  for i in 0...25
+    @media(min-width 1200px)
+      .col-lg-{i}
+        float left
+        width (100*i/24)%
+      .offset-lg-{i}
+        margin-left (100*i/24)%

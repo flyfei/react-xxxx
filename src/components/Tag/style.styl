@@ -1,0 +1,52 @@
+$blue = #61bbef
+$red = #ff5c5d
+$green = #1fbba6
+$yellow = #ff9503
+
+.tag
+  line-height 1
+  user-select none
+  color #666
+  background-color #fff
+  font-weight 400
+  font-size 12px
+  display inline-block
+  margin-left 10px
+  margin-bottom 2px
+  padding 5px 10px
+  vertical-align middle
+  border-radius 12px
+  transition .3s
+  border 1px solid #eee
+  &.primary
+    border-color $blue
+    color alpha(#fff, .8)
+    background-color $blue
+    &:hover
+      background-color darken(@background-color, 10)
+    &:active
+      background-color darken(@background-color, 30)
+  &.danger
+    border-color $red
+    color alpha(#fff, .8)
+    background-color $red
+    &:hover
+      background-color darken(@background-color, 10)
+    &:active
+      background-color darken(@background-color, 30)
+  &.success
+    border-color $green
+    color alpha(#fff, .8)
+    background-color $green
+    &:hover
+      background-color darken(@background-color, 10)
+    &:active
+      background-color darken(@background-color, 30)
+  &.warning
+    border-color $yellow
+    color alpha(#fff, .8)
+    background-color $yellow
+    &:hover
+      background-color darken(@background-color, 10)
+    &:active
+      background-color darken(@background-color, 30)

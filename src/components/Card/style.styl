@@ -1,0 +1,43 @@
+$blue = #61bbef
+$red = #ff5c5d
+$green = #1fbba6
+$yellow = #ff9503
+
+.card
+  margin-bottom 10px
+  user-select none
+  border-radius 3px
+  background-color #fff
+  padding 15px
+  position relative
+  min-height 120px
+  overflow hidden
+  color #666
+  &.primary
+    color alpha(#fff, .8)
+    background-color $blue
+    .icon
+      color alpha(#fff, .3)
+  &.danger
+    color alpha(#fff, .8)
+    background-color $red
+    .icon
+      color alpha(#fff, .3)
+  &.success
+    color alpha(#fff, .8)
+    background-color $green
+    .icon
+      color alpha(#fff, .3)
+  &.warning
+    color alpha(#fff, .8)
+    background-color $yellow
+    .icon
+      color alpha(#fff, .3)
+
+.icon
+  font-size 60px !important
+  color alpha(#333, .3)
+  position absolute
+  bottom -15px
+  right 10px
+  

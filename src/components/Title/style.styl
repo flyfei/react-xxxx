@@ -1,0 +1,41 @@
+$blue = #61bbef
+$red = #ff5c5d
+$green = #1fbba6
+$yellow = #ff9503
+
+a.title
+  transition .3s
+  color #666
+  &:hover
+    color #61bbef
+  &:active
+    color darken(#61bbef, 30)
+.title
+  line-height 30px
+  height 30px
+  display block
+  position relative
+  &.inline
+    display inline-block
+  &.primary
+  &.danger
+  &.success
+  &.warning
+    padding-left 10px
+    &:before
+      position absolute
+      border-radius 3px
+      left 0
+      top 7px
+      height 16px
+      content ''
+      display block
+      width 2px
+  &.primary:before
+    background-color $blue
+  &.danger:before
+    background-color $red
+  &.success:before
+    background-color $green
+  &.warning:before
+    background-color $yellow
